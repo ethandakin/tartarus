@@ -43,10 +43,6 @@ in {
     nvidia = {
       open = false; # Proprietary driver for better performance
       nvidiaSettings = true; # Nvidia settings utility
-      powerManagement = {
-        enable = true; # Power management
-        finegrained = true; # More precise power consumption control
-      };
       modesetting.enable = true; # Required for Wayland
       package = nvidiaDriverChannel;
       forceFullCompositionPipeline = true; # Prevents screen tearing
