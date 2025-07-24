@@ -54,7 +54,7 @@
         LC_TIME = "en_AU.UTF-8";
     };
 
-    servers.xserver.xkb = {
+    services.xserver.xkb = {
         layout = "us";
         variant = "";
     };
