@@ -18,5 +18,9 @@
         userEmail = "ethand@outlook.com.au";
     };
 
+    programs.wofi = {
+        enable = true;
+    };
+
     home.stateVersion = "25.05";
 }
