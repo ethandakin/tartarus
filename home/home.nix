@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+    imports = [
+        ../modules/hyprland.nix
+    ];
+
     home.username = "ethan";
     home.homeDirectory = "/home/ethan";
 
