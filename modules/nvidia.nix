@@ -2,7 +2,8 @@
 
 { pkgs, config, ...}: let
   # Using beta driver for recent GPUs like RTX 4070
-  nvidiaDriverChannel = config.boot.kernelPackages.nvidiaPackages.beta;
+  # Couldnt use beta driver for some reason NixOS/nixpkgs/issues/411829
+  nvidiaDriverChannel = config.boot.kernelPackages.nvidiaPackages.production;
 in {
   # Video drivers configuration for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"]; # Simplified - other modules are loaded automatically
