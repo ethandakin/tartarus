@@ -19,7 +19,7 @@
             # Set programs that you use
             "$terminal" = "kitty";
             "$fileManager" = "dolphin";
-            "$menu" = "wofi";
+            "$menu" = "wofi --show drun";
 
 
             #################

@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ../modules/hyprland.nix
+        ./hyprland.nix
     ];
 
     home.username = "ethan";
@@ -24,6 +24,15 @@
 
     programs.kitty = {
         enable = true;
+    };
+
+    programs.firefox = {
+	enable = true;
+    };
+
+    programs.nixcord = {
+	enable = true;
+	vesktop.enable = true;
     };
 
     home.stateVersion = "25.05";

@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
+    nixcord.url = "github:kaylorben/nixcord";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,7 +17,7 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./hosts/pc
 
           home-manager.nixosModules.home-manager
           {
@@ -23,6 +25,10 @@
             home-manager.useUserPackages = true;
 
             home-manager.users.ethan = import ./home/home.nix;
+          
+            home-manager.sharedModules = [
+              inputs.nixcord.homeModules.nixcord
+            ];
           }
         ];
       };
